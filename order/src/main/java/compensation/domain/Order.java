@@ -49,16 +49,11 @@ public class Order {
         return orderRepository;
     }
     public static void updateStatus(OutOfStock outOfStock) {
-        /** Example :  finding and process
-        
-        repository().findById(outOfStock.get???()).ifPresent(order->{
+        repository().findById(outOfStock.getOrderId()).ifPresent(order ->{
             
-            order // do something
+            order.setStatus("OrderCancelled");
             repository().save(order);
+        });
 
-
-         });
-        */
-
-    }
+    }   
 }
