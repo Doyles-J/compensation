@@ -11,6 +11,8 @@ import OrderOrderDetail from "./components/listers/OrderOrderDetail"
 import InventoryInventoryManager from "./components/listers/InventoryInventoryCards"
 import InventoryInventoryDetail from "./components/listers/InventoryInventoryDetail"
 
+import CheckStockView from "./components/CheckStockView"
+import CheckStockViewDetail from "./components/CheckStockViewDetail"
 
 export default new Router({
     // mode: 'history',
@@ -38,6 +40,16 @@ export default new Router({
                 component: InventoryInventoryDetail
             },
 
+            {
+                path: '/inventories/checkStocks',
+                name: 'CheckStockView',
+                component: CheckStockView
+            },
+            {
+                path: '/inventories/checkStocks/:id',
+                name: 'CheckStockViewDetail',
+                component: CheckStockViewDetail
+            },
 
 
     ]
